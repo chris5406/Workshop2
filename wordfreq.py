@@ -2,12 +2,8 @@
 
 import sys
 import string
-file = open("test.txt")
-words = []
 
-for line in file:
-	words += line.split()
-
+words = sys.stdin.read().split()
 d = dict()
 for word in words:
 	t = word.translate(str.maketrans('','',string.punctuation)).upper()
